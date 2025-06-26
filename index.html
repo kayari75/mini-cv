@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini CV - Votre Nom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- ** À CHANGER ** : Mettez le chemin vers votre photo -->
+        <img src="https://i.pravatar.cc/150" alt="Photo de profil" class="profile-picture">
+
+        <!-- ** À CHANGER ** : Mettez votre nom -->
+        <h1 class="name">Jean Dupont</h1>
+
+        <!-- ** À CHANGER ** : Écrivez une courte biographie -->
+        <p class="bio">
+            Développeur web passionné avec 5 ans d'expérience dans la création d'applications web modernes et réactives. Spécialisé en JavaScript et frameworks front-end.
+        </p>
+        
+        <div id="qrcode-container">
+            <p>Scannez pour visiter cette page</p>
+            <div id="qrcode"></div>
+        </div>
+    </div>
+
+    <!-- Librairie externe pour générer le QR Code -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+    
+    <!-- NOUVELLE LIGNE : Librairie pour l'effet cotillons -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Notre script personnalisé -->
+    <script src="script.js"></script>
+
+</body>
+</html>

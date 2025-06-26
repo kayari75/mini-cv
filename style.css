@@ -1,0 +1,79 @@
+/* --- PARAMÈTRES DES COULEURS --- */
+/* Modifiez ces valeurs pour changer le thème de la page */
+:root {
+  --couleur-fond: #156bea;       /* Couleur de l'arrière-plan de la page */
+  --couleur-carte: #ffffff;      /* Couleur de fond de la carte CV */
+  --couleur-texte: #333333;       /* Couleur du texte principal */
+  --couleur-bordure-photo: #4436ff; /* Couleur de la bordure autour de la photo */
+  --couleur-ombre: rgba(0, 0, 0, 0.1); /* Couleur de l'ombre de la carte et photo */
+}
+/* -------------------------------- */
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  
+  /* Centre la carte verticalement et horizontalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box; /* Assure que le padding ne crée pas de scrollbar */
+}
+
+.card {
+  background-color: var(--couleur-carte);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px var(--couleur-ombre);
+  text-align: center;
+  
+  /* Largeur maximale pour ne pas être trop large sur ordinateur */
+  max-width: 400px; 
+  /* La carte prend 95% de la largeur sur les petits écrans */
+  width: 95%; 
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  
+  /* C'est la ligne qui rend l'image parfaitement circulaire */
+  border-radius: 50%; 
+  
+  /* Assure que l'image remplit le cercle sans être déformée */
+  object-fit: cover; 
+  
+  border: 5px solid var(--couleur-bordure-photo);
+  box-shadow: 0 2px 8px var(--couleur-ombre);
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 1.8em;
+  font-weight: bold; /* Comme demandé */
+  margin: 0;
+}
+
+.bio {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+#qrcode-container p {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Le QR Code est généré dans un 'canvas', on le centre */
+#qrcode {
+  display: flex;
+  justify-content: center;
+}
